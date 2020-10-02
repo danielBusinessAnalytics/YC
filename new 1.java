@@ -1,56 +1,36 @@
 
 
+import java.util.Scanner;
+import java.time.*;
+
 class Demo{
 	public static void main(String args[]){
-		System.out.println("hoi");
-		int getal = 34;
-		System.out.println(getal);
-		double kommagetal = 55.6;
-		System.out.println(kommagetal);
-		String woord = "woensdag";
-		System.out.println(woord);
-		Speler speler1 = new Speler();
-		Speler speler2 = new Speler();
-		speler1.voornaam = "Johan";
-		System.out.println(speler1.voornaam);
-		System.out.println(speler1);
-		System.out.println(speler1.leeftijd);
-		System.out.println(speler2.voornaam);
-		speler1.voorstellen();
-	}
+		Dier dier = new Dier();
+		Dier dier2 = new Konijn();
+		Konijn konijn = new Konijn();	
+		//Konijn konijn2 = new Dier(); // kan niet
+		//Konijn konijn3 = new Olietanker(); 
 
-}
-///  methode functie   ()
-class Speler{
-	String voornaam;
-	int leeftijd;
-	void voorstellen(){
-		System.out.println("Hoi ik ben: "+voornaam);
+
+		dier.aantalCellen = 2000000;
+		konijn.aantalCellen = 1000000;
+
 	}
 }
 
 
 
-
-
-
-
-class Schaakspel{
-	Speler zwart;
-	Speler wit;
+class Olietanker{}
+class Dier{    // parent base
+	int aantalCellen;
+	void voortplanten(){
+		System.out.println("voortplanten in dier");
+	}
+}
+class Konijn extends Dier{   // is a    child subclass Covariant -->richting 3 antwoorden
+	int lengteOren;
+	void wortelsEten(){
+		System.out.println("wortelseten in Konijn");
+	}
 }
 
-// Object OOP Class Object
-
-
-// Klasse		kenmerken	allemaal delen 		Voornaam
-// Object		kenmerken	iedereen verschillend	Felix
-
-
-// Klasse		Kenmerken
-// Object		Waarde van kenmerken
-
-// Klasse Objecten		Object -> uitgietsel van een klasse
-
-// Klasse		Bouwtekening	Ovenschaal	Idee van Plato
-// Object		Huis		Lasagne		Fysieke verschijning
